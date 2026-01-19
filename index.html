@@ -1,0 +1,643 @@
+
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ouidah, sur les traces de l'histoire et de la spiritualité </title>
+    <link rel="icon" type="image/png" href="https://api.mytripplanner.fr/api/files/pbc_1321337024/47976eld0rscwbc/favicon_ytvg76obie.svg?thumb=100x100&token=" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <script>
+      tailwind.config = {
+          theme: {
+              extend: {
+                  colors: {
+                      template: {
+                          sable: '#FFEDD5', 
+                          ocre: '#F97316',   // Orange Vibrant (Brand Accent)
+                          roche: '#0F172A',  // Bleu Nuit (Brand Dark)
+                          ciel: '#0D9488',   // Vert Lagon (Brand Primary)
+                          bg: '#FFF7ED'      // C'est un blanc cassé chaud, parfait pour la lecture et le contraste.
+                      }
+                  },
+                  fontFamily: {
+                      sans: ['"Plus Jakarta Sans"', 'sans-serif'], // Nouvelle police corps
+                      serif: ['"Outfit"', 'sans-serif'],           // Nouvelle police titres
+                  }
+              }
+          }
+      }
+    </script>
+    <style>
+        body { overflow-x: hidden; }
+        
+        /* 2. FORÇAGE DES GRAISSES (Comme sur la Landing Page) */
+        .font-sans { font-weight: 600 !important; }
+        .font-serif { font-weight: 800 !important; }
+
+        /* Ligne verticale de la timeline */
+        .timeline-line {
+            position: absolute;
+            left: 24px;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background-color: #E5E7EB;
+            z-index: 0;
+        }
+
+        @media (min-width: 768px) {
+            .timeline-line { left: 50%; margin-left: -1px; }
+        }
+
+        /* Style des cartes Info */
+        .tip-card {
+            border-left: 4px solid #F97316; /* ocre */
+            background-color: #FFF7ED;
+        }
+
+        /* Masquer la scrollbar de la nav mobile tout en gardant le scroll */
+        .hide-scroll::-webkit-scrollbar { display: none; }
+        .hide-scroll { -ms-overflow-style: none; scrollbar-width: none; }
+    </style>
+</head>
+<body class="bg-template-bg text-template-roche antialiased">
+    
+    <nav id="nav-desktop" class="hidden md:flex fixed top-0 w-full z-50 bg-white/90 backdrop-blur border-b border-gray-200 py-4 px-8 justify-between items-center shadow-sm transition-transform duration-300 -translate-y-full">
+        <a href="#top" class="text-xl font-serif font-bold tracking-widest text-template-roche">MyTrip<span class="text-template-ocre">Planner</span></a>
+        <div class="space-x-6 text-sm font-bold text-gray-600">
+            <a href="#jour-1" class="nav-item-desktop hover:text-template-ocre transition">Le Parcours</a>
+            <a href="#pratique" class="nav-item-desktop hover:text-template-ocre transition">Infos Pratiques</a>
+        </div>
+    </nav>
+
+    <nav id="nav-mobile" class="md:hidden fixed top-0 w-full z-50 bg-white/95 backdrop-blur border-b border-gray-200 py-3 pl-4 overflow-x-auto hide-scroll whitespace-nowrap shadow-md transition-transform duration-300 -translate-y-full">
+        <div class="flex space-x-2 pr-4" id="mobile-menu-container">
+            <a href="#top" class="inline-block px-3 py-1 bg-template-roche text-white rounded-full text-xs font-bold shadow-sm">Top</a>
+            
+                <a href="#jour-1" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J1 Arrivée paisible à Ouidah</a>
+            
+                <a href="#jour-2" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J2 Plongée dans l'histoire et la spiritualité</a>
+            
+                <a href="#jour-3" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J3 Sur les traces de la Route des Esclaves</a>
+            
+                <a href="#jour-4" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J4 Détente balnéaire et immersion locale</a>
+            
+                <a href="#jour-5" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J5 Évasion lacustre et villages de pêcheurs</a>
+            
+                <a href="#jour-6" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J6 Art, culture et spiritualité vaudou</a>
+            
+                <a href="#jour-7" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J7 Évasion côtière à Grand-Popo</a>
+            
+                <a href="#jour-8" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J8 Balade à vélo et immersion rurale</a>
+            
+                <a href="#jour-9" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J9 Atelier culinaire et saveurs locales</a>
+            
+                <a href="#jour-10" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J10 Patrimoine religieux et coexistence</a>
+            
+                <a href="#jour-11" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J11 Nature et tranquillité des lagunes</a>
+            
+                <a href="#jour-12" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J12 Découverte artisanale et saveurs locales</a>
+            
+                <a href="#jour-13" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J13 Journée de bien-être et de sérénité</a>
+            
+                <a href="#jour-14" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J14 Derniers souvenirs et dîner d'adieu</a>
+            
+                <a href="#jour-15" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J15 Départ de Ouidah</a>
+            
+            <a href="#pratique" class="mobile-link inline-block px-3 py-1 border border-gray-300 text-gray-500 rounded-full text-xs font-bold">Infos</a>
+        </div>
+    </nav>
+
+    <header id="top" class="relative h-[60vh] flex items-center justify-center bg-cover bg-center"
+            style="background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.7)), url('https://raw.githubusercontent.com/mytripplanner-dotfr/Ouidah-nem5y5080y7iq0j/main/header.png" || 'https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?q=80&w=2021'}');">
+        
+        <div class="relative z-20 text-center text-white px-4 max-w-3xl animate-fade-in-up">
+            <p class="font-sans text-template-sable tracking-[0.2em] mb-4 uppercase text-xs font-bold">Feuille de Route</p>
+            <h1 class="font-serif text-5xl md:text-8xl mb-6 leading-tight drop-shadow-lg">OUIDAH</h1>
+            <p class="font-sans text-lg md:text-xl text-gray-100 mb-10 font-medium max-w-2xl mx-auto leading-relaxed">Ouidah, sur les traces de l'histoire et de la spiritualité</p>
+            
+            <div class="flex flex-wrap justify-center gap-4 text-sm font-bold mb-10">
+                <span class="bg-white/20 backdrop-blur-md px-5 py-2 rounded-full border border-white/30 shadow-sm">🗓️ Du 26 Janvier au 10 Février 2026</span>
+                <span class="bg-white/20 backdrop-blur-md px-5 py-2 rounded-full border border-white/30 shadow-sm">💰 Environ 3150 €/personne</span>
+                <span class="bg-white/20 backdrop-blur-md px-5 py-2 rounded-full border border-white/30 shadow-sm">🛬 1h45 depuis Riou, Burkina Faso</span>
+            </div>
+        </div>
+    </header>
+
+    <section id="itineraire" class="max-w-6xl mx-auto px-4 py-16 relative">
+      <div class="text-center mb-16">
+            <h2 class="text-template-ocre font-bold tracking-normal text-4xl mt-2 uppercase font-serif">Votre Roadtrip</h2>
+      </div>
+
+        <div class="relative">
+            <div class="timeline-line"></div>
+            
+                <div id="jour-1" class="section-etape relative z-10 mb-20 md:flex md:flex-row-reverse md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-roche rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-left md:pl-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 1</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Arrivée paisible à Ouidah</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Après votre vol et le transfert depuis Cotonou, installez-vous confortablement. Profitez d'une première balade douce pour vous imprégner de l'atmosphère unique de Ouidah et de ses rues calmes.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li><strong>🛬 Arrivée à Cotonou et transfert</strong>: Atterrissage à l'aéroport de Cotonou, suivi d'un transfert relaxant vers votre hébergement à Ouidah, une ville chargée d'histoire.</li><li><strong>🛏️ Installation à l'hôtel</strong>: Prenez le temps de vous installer dans votre hôtel, de vous rafraîchir et de vous détendre après le voyage.</li><li><strong>🚶‍♂️ Première balade exploratoire</strong>: Une promenade légère dans les environs immédiats de votre hôtel pour sentir l'ambiance locale et repérer les premiers points d'intérêt.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pr-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/mytripplanner-dotfr/Ouidah-nem5y5080y7iq0j/main/jour1.jpg" class="w-full h-64 object-cover" alt="Jour 1">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">ℹ️ À savoir</p>
+                                <p class="text-gray-700">Le trajet de l'aéroport de Cotonou à Ouidah dure environ 1 heure. Prévoyez de l'eau et de la monnaie locale (Franc CFA) pour les petites dépenses.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-2" class="section-etape relative z-10 mb-20 md:flex  md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-ocre rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-right md:pr-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 2</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Plongée dans l'histoire et la spiritualité</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Découvrez le passé poignant de Ouidah au Fort Portugais, puis explorez les mystères du Temple des Pythons et la sérénité de la Forêt Sacrée de Kpassè, des lieux emblématiques de la ville.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li><strong>🏛️ Visite du Musée d'Histoire de Ouidah</strong>: Explorez l'ancien Fort Portugais, transformé en musée, pour comprendre l'histoire de la traite négrière et la culture béninoise.</li><li><strong>🐍 Découverte du Temple des Pythons</strong>: Un lieu sacré où des pythons vivants sont vénérés, symboles de protection et de spiritualité vaudou, offrant une expérience unique et respectueuse.</li><li><strong>🌳 Promenade dans la Forêt Sacrée de Kpassè</strong>: Flânez dans cette forêt mystique, abritant des statues et des arbres centenaires, un havre de paix et de recueillement.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pl-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/mytripplanner-dotfr/Ouidah-nem5y5080y7iq0j/main/jour2.jpg" class="w-full h-64 object-cover" alt="Jour 2">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">💡 Conseil</p>
+                                <p class="text-gray-700">Au Temple des Pythons, il est d'usage de demander la permission avant de prendre des photos et de respecter le caractère sacré du lieu.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-3" class="section-etape relative z-10 mb-20 md:flex md:flex-row-reverse md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-ciel rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-left md:pl-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 3</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Sur les traces de la Route des Esclaves</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Suivez le chemin poignant de la Route des Esclaves, de l'Arbre de l'Oubli à la Porte du Non-Retour, un parcours émouvant et essentiel pour comprendre l'histoire de Ouidah et de l'humanité.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li><strong>🚶‍♀️ Parcours de la Route des Esclaves</strong>: Une marche méditative le long du chemin historique emprunté par les captifs, jalonné de monuments commémoratifs.</li><li><strong>🌳 Visite de l'Arbre de l'Oubli</strong>: Un site symbolique où les esclaves étaient contraints d'effectuer un rituel pour "oublier" leur identité avant l'embarquement.</li><li><strong>🚪 Contemplation à la Porte du Non-Retour</strong>: Un monument emblématique sur la plage, marquant le point de non-retour pour des millions d'Africains déportés, offrant un moment de recueillement.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pr-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/mytripplanner-dotfr/Ouidah-nem5y5080y7iq0j/main/jour3.jpg" class="w-full h-64 object-cover" alt="Jour 3">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">🙏 Respect</p>
+                                <p class="text-gray-700">Ce parcours est un lieu de mémoire. Adoptez une attitude respectueuse et ouverte à la réflexion sur cette période sombre de l'histoire.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-4" class="section-etape relative z-10 mb-20 md:flex  md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-roche rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-right md:pr-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 4</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Détente balnéaire et immersion locale</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Après les émotions de la veille, offrez-vous une journée de pure détente sur la plage de Ouidah. L'après-midi, plongez dans l'effervescence colorée du marché local pour une immersion authentique.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li><strong>🏖️ Matinée de relaxation à la Plage de Ouidah</strong>: Profitez du sable fin et des vagues de l'Atlantique pour une matinée de farniente et de baignade, loin de l'agitation.</li><li><strong>🚶‍♂️ Balade et déjeuner sur la plage</strong>: Une promenade tranquille le long du rivage, suivie d'un déjeuner simple avec vue sur l'océan, savourant la brise marine.</li><li><strong>🛍️ Exploration du Marché de Ouidah</strong>: Immergez-vous dans l'ambiance vibrante du marché local, découvrez les produits frais, l'artisanat et la vie quotidienne des habitants.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pl-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/mytripplanner-dotfr/Ouidah-nem5y5080y7iq0j/main/jour4.jpg" class="w-full h-64 object-cover" alt="Jour 4">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">☀️ Protection solaire</p>
+                                <p class="text-gray-700">Le soleil peut être intense. N'oubliez pas votre crème solaire, un chapeau et des lunettes de soleil pour la plage et le marché.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-5" class="section-etape relative z-10 mb-20 md:flex md:flex-row-reverse md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-ocre rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-left md:pl-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 5</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Évasion lacustre et villages de pêcheurs</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Partez à la découverte du paisible Lac Ahémé en pirogue, explorez ses villages de pêcheurs sur pilotis et imprégnez-vous de la vie locale rythmée par l'eau, une expérience authentique et relaxante.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li><strong>🛶 Excursion en pirogue sur le Lac Ahémé</strong>: Une balade apaisante sur les eaux calmes du lac, observant la faune et la flore locales.</li><li><strong>🏡 Visite d'un village de pêcheurs</strong>: Rencontrez les habitants, découvrez leurs techniques de pêche traditionnelles et leur mode de vie simple et harmonieux.</li><li><strong>🍽️ Déjeuner de poissons frais</strong>: Savourez un délicieux repas à base de poissons fraîchement pêchés du lac, préparés selon les recettes locales.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pr-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/mytripplanner-dotfr/Ouidah-nem5y5080y7iq0j/main/jour5.jpg" class="w-full h-64 object-cover" alt="Jour 5">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">📸 Photographie</p>
+                                <p class="text-gray-700">Demandez toujours la permission avant de photographier les personnes, surtout dans les villages. Un sourire et quelques mots en langue locale (Fon) sont toujours appréciés.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-6" class="section-etape relative z-10 mb-20 md:flex  md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-ciel rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-right md:pr-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 6</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Art, culture et spiritualité vaudou</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Explorez la richesse de l'art contemporain africain au Centre Zinsou, puis, si vous le souhaitez, participez à une rencontre respectueuse avec un dignitaire vaudou pour une meilleure compréhension de cette spiritualité.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li><strong>🎨 Visite du Centre Artistique et Culturel Zinsou</strong>: Découvrez des expositions d'art contemporain africain, souvent en lien avec la culture et l'histoire béninoises, dans un cadre magnifique.</li><li><strong>🗣️ Rencontre avec un dignitaire Vaudou (optionnel)</strong>: Une opportunité unique d'échanger avec un initié pour démystifier et mieux comprendre les pratiques et la philosophie du Vaudou, dans le respect mutuel.</li><li><strong>🚶‍♂️ Balade libre et détente</strong>: Profitez de l'après-midi pour flâner dans les rues de Ouidah, faire quelques emplettes ou simplement vous reposer.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pl-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/mytripplanner-dotfr/Ouidah-nem5y5080y7iq0j/main/jour6.jpg" class="w-full h-64 object-cover" alt="Jour 6">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">💡 Compréhension</p>
+                                <p class="text-gray-700">Le Vaudou est une religion complexe et souvent mal comprise. Abordez cette rencontre avec curiosité et ouverture d'esprit, sans jugement.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-7" class="section-etape relative z-10 mb-20 md:flex md:flex-row-reverse md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-roche rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-left md:pl-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 7</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Évasion côtière à Grand-Popo</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Partez pour une journée d'évasion à Grand-Popo, où la rivière Mono rencontre l'océan Atlantique à la Bouche du Roy. Profitez des plages paisibles et de l'ambiance sereine de ce lieu unique.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li><strong>🚗 Trajet vers Grand-Popo</strong>: Un agréable trajet le long de la côte pour rejoindre cette charmante ville côtière, connue pour ses plages et son estuaire.</li><li><strong>🏖️ Détente sur les plages de Grand-Popo</strong>: L'occasion de se prélasser sur des plages moins fréquentées, de se baigner ou de faire de longues promenades au bord de l'eau.</li><li><strong>🌅 Visite de la Bouche du Roy</strong>: Admirez le spectacle naturel où le fleuve Mono se jette dans l'océan, un lieu de rencontre entre eau douce et eau salée, idéal pour la contemplation.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pr-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/mytripplanner-dotfr/Ouidah-nem5y5080y7iq0j/main/jour7.jpg" class="w-full h-64 object-cover" alt="Jour 7">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">🍽️ Gastronomie</p>
+                                <p class="text-gray-700">Grand-Popo est réputée pour ses fruits de mer frais. Ne manquez pas de déguster un poisson grillé ou des crevettes dans un restaurant local en bord de mer.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-8" class="section-etape relative z-10 mb-20 md:flex  md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-ocre rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-right md:pr-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 8</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Balade à vélo et immersion rurale</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">De retour à Ouidah, explorez les environs à vélo, traversant des plantations de palmiers et des villages paisibles. Une journée douce pour apprécier la campagne béninoise et ses paysages verdoyants.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li><strong>🚲 Balade à vélo dans la campagne de Ouidah</strong>: Louez un vélo et partez à la découverte des chemins de terre, des champs et des palmeraies environnantes, à votre rythme.</li><li><strong>🌴 Visite d'une plantation de palmiers à huile</strong>: Apprenez-en davantage sur la culture du palmier à huile, un élément essentiel de l'économie et de la cuisine locale.</li><li><strong>🧘‍♀️ Après-midi libre et détente</strong>: Profitez de l'après-midi pour vous reposer, lire un livre ou simplement vous imprégner de l'ambiance tranquille de Ouidah.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pl-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/mytripplanner-dotfr/Ouidah-nem5y5080y7iq0j/main/jour8.jpg" class="w-full h-64 object-cover" alt="Jour 8">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">💧 Hydratation</p>
+                                <p class="text-gray-700">Pensez à emporter suffisamment d'eau pour votre balade à vélo, surtout si la chaleur est au rendez-vous.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-9" class="section-etape relative z-10 mb-20 md:flex md:flex-row-reverse md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-ciel rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-left md:pl-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 9</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Atelier culinaire et saveurs locales</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Plongez dans la gastronomie béninoise avec un atelier de cuisine. Apprenez à préparer des plats traditionnels et savourez vos créations, une expérience gourmande et conviviale.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li><strong>👩‍🍳 Atelier de cuisine béninoise</strong>: Participez à un cours de cuisine pour découvrir les secrets des saveurs locales et apprendre à préparer des plats emblématiques.</li><li><strong>🍽️ Dégustation de vos créations</strong>: Savourez le fruit de votre travail lors d'un déjeuner convivial, partageant les plats que vous avez préparés.</li><li><strong>🛍️ Visite d'une boutique d'artisanat local</strong>: Trouvez des souvenirs uniques et soutenez les artisans locaux en découvrant leurs créations.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pr-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/mytripplanner-dotfr/Ouidah-nem5y5080y7iq0j/main/jour9.jpg" class="w-full h-64 object-cover" alt="Jour 9">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">🌶️ Épices</p>
+                                <p class="text-gray-700">La cuisine béninoise peut être relevée. N'hésitez pas à demander à ajuster le niveau de piment selon vos préférences lors de l'atelier.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-10" class="section-etape relative z-10 mb-20 md:flex  md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-roche rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-right md:pr-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 10</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Patrimoine religieux et coexistence</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Explorez les lieux de culte de Ouidah, témoins de la diversité religieuse et de la coexistence pacifique. Visitez l'Église Saint-Michel et la Mosquée de Ouidah, des édifices chargés d'histoire.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li><strong>⛪ Visite de l'Église Saint-Michel</strong>: Admirez l'architecture de cette église historique, un symbole de la présence chrétienne à Ouidah et de son passé colonial.</li><li><strong>🕌 Découverte de la Mosquée de Ouidah</strong>: Explorez ce lieu de culte musulman, illustrant la richesse et la diversité des croyances présentes dans la ville.</li><li><strong>🚶‍♂️ Balade dans le quartier historique</strong>: Flânez dans les rues adjacentes, observez l'architecture coloniale et l'animation locale, appréciant la douceur de vivre.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pl-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/mytripplanner-dotfr/Ouidah-nem5y5080y7iq0j/main/jour10.jpg" class="w-full h-64 object-cover" alt="Jour 10">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1"> respectful Tenue vestimentaire</p>
+                                <p class="text-gray-700">Lors de la visite des lieux de culte, prévoyez une tenue respectueuse (épaules et genoux couverts) et retirez vos chaussures si nécessaire.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-11" class="section-etape relative z-10 mb-20 md:flex md:flex-row-reverse md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-ocre rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-left md:pl-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 11</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Nature et tranquillité des lagunes</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Échappez à l'agitation pour une journée de sérénité au bord des lagunes de Ouidah. Profitez d'une balade en pirogue et de moments de calme au cœur d'une nature luxuriante.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li><strong>🛶 Balade en pirogue sur les lagunes</strong>: Explorez les paisibles lagunes de Ouidah, un écosystème riche et un havre de paix pour la faune locale.</li><li><strong>🐦 Observation des oiseaux</strong>: Profitez de la quiétude des lieux pour observer les nombreuses espèces d'oiseaux qui peuplent les rives et les mangroves.</li><li><strong>🧘‍♀️ Moment de détente au bord de l'eau</strong>: Installez-vous confortablement et laissez-vous bercer par le clapotis de l'eau, un moment idéal pour la méditation ou la lecture.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pr-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/mytripplanner-dotfr/Ouidah-nem5y5080y7iq0j/main/jour11.jpg" class="w-full h-64 object-cover" alt="Jour 11">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">🦟 Anti-moustiques</p>
+                                <p class="text-gray-700">Les zones humides peuvent attirer les moustiques. Pensez à appliquer un répulsif, surtout en fin de journée.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-12" class="section-etape relative z-10 mb-20 md:flex  md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-ciel rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-right md:pr-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 12</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Découverte artisanale et saveurs locales</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Poursuivez votre immersion culturelle en visitant des ateliers d'artisans locaux. Terminez la journée par une dégustation de fruits exotiques et de spécialités sucrées béninoises.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li><strong>🏺 Visite d'ateliers d'artisanat</strong>: Rencontrez des potiers, des sculpteurs ou des tisserands, observez leur savoir-faire et admirez leurs créations uniques.</li><li><strong>🛍️ Shopping de souvenirs authentiques</strong>: L'occasion parfaite de trouver des cadeaux originaux et de soutenir l'économie locale.</li><li><strong>🥭 Dégustation de fruits exotiques et douceurs</strong>: Laissez-vous tenter par la richesse des saveurs locales en goûtant des fruits frais et des pâtisseries traditionnelles.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pl-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/mytripplanner-dotfr/Ouidah-nem5y5080y7iq0j/main/jour12.jpg" class="w-full h-64 object-cover" alt="Jour 12">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1"> bargaining Négociation</p>
+                                <p class="text-gray-700">Dans les marchés et ateliers, la négociation des prix est souvent de mise. Faites-le avec le sourire et respect.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-13" class="section-etape relative z-10 mb-20 md:flex md:flex-row-reverse md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-roche rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-left md:pl-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 13</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Journée de bien-être et de sérénité</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Offrez-vous une journée entièrement dédiée au bien-être. Profitez d'un massage relaxant, d'une séance de yoga ou simplement d'un moment de calme pour recharger vos batteries avant le départ.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li><strong>💆‍♀️ Massage relaxant (optionnel)</strong>: Laissez-vous choyer par un massage traditionnel pour détendre corps et esprit, une parenthèse de pure relaxation.</li><li><strong>🧘‍♀️ Séance de yoga ou méditation</strong>: Trouvez un endroit paisible pour une séance de yoga ou de méditation, en harmonie avec la nature environnante.</li><li><strong>📖 Lecture et contemplation</strong>: Profitez de ce temps libre pour lire, écrire ou simplement contempler les paysages, savourant les derniers instants de quiétude.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pr-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/mytripplanner-dotfr/Ouidah-nem5y5080y7iq0j/main/jour13.jpg" class="w-full h-64 object-cover" alt="Jour 13">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">✨ Détente</p>
+                                <p class="text-gray-700">N'hésitez pas à demander à votre hôtel s'il propose des services de bien-être ou s'il peut vous recommander un prestataire local.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-14" class="section-etape relative z-10 mb-20 md:flex  md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-ocre rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-right md:pr-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 14</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Derniers souvenirs et dîner d'adieu</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Profitez de cette dernière journée complète pour faire vos derniers achats de souvenirs et savourer un dîner d'adieu mémorable, clôturant en beauté votre voyage à Ouidah.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li><strong>🎁 Achats de dernière minute</strong>: Flânez une dernière fois dans les boutiques et marchés pour trouver les derniers souvenirs à rapporter de votre voyage.</li><li><strong>🚶‍♂️ Revoir un lieu coup de cœur</strong>: Retournez visiter un endroit qui vous a particulièrement marqué pour un dernier regard et quelques photos.</li><li><strong>🍽️ Dîner d'adieu dans un restaurant local</strong>: Savourez un dernier repas béninois, remémorant les moments forts de votre séjour dans une ambiance conviviale.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pl-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/mytripplanner-dotfr/Ouidah-nem5y5080y7iq0j/main/jour14.jpg" class="w-full h-64 object-cover" alt="Jour 14">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">📦 Bagages</p>
+                                <p class="text-gray-700">Pensez à vérifier le poids de vos bagages si vous avez fait beaucoup d'achats, pour éviter les surprises à l'aéroport.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-15" class="section-etape relative z-10 mb-20 md:flex md:flex-row-reverse md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-ciel rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-left md:pl-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 15</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Départ de Ouidah</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Il est temps de quitter Ouidah, la tête pleine de souvenirs et le cœur enrichi par cette expérience unique. Transfert vers l'aéroport de Cotonou pour votre vol retour.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li><strong>🛏️ Petit-déjeuner et check-out</strong>: Profitez d'un dernier petit-déjeuner béninois avant de procéder au départ de votre hôtel.</li><li><strong>🚗 Transfert vers l'aéroport de Cotonou</strong>: Un véhicule vous conduira à l'aéroport international Cardinal Bernardin Gantin de Cotonou pour votre vol.</li><li><strong>🛫 Vol retour</strong>: Embarquement pour votre vol, emportant avec vous les couleurs, les sons et les saveurs du Bénin.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pr-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/mytripplanner-dotfr/Ouidah-nem5y5080y7iq0j/main/jour15.jpg" class="w-full h-64 object-cover" alt="Jour 15">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">⏰ Heure de départ</p>
+                                <p class="text-gray-700">Prévoyez suffisamment de temps pour le transfert et les formalités d'enregistrement à l'aéroport, surtout en cas de trafic.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+            </div>
+    </section>
+
+    <section id="pratique" class="bg-white border-t border-gray-200 pt-12 pb-12 scroll-mt-24">
+        <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-3 gap-10">
+            <div>
+                <h4 class="font-serif text-xl mb-4 text-template-roche flex items-center gap-2 font-bold">
+                    <span>💴</span> Budget
+                </h4>
+                
+                    <p class="text-sm text-gray-600 leading-relaxed mb-2"><strong>Budget vol: </strong>A partir de 841 €/pers</p>
+                
+                    <p class="text-sm text-gray-600 leading-relaxed mb-2"><strong>Budget transports: </strong>Environ 375 €/pers (transferts aéroport, taxis locaux, zemidjans)</p>
+                
+                    <p class="text-sm text-gray-600 leading-relaxed mb-2"><strong>Budget repas: </strong>Environ 800 €/pers (restaurants de gamme moyenne, dégustations locales)</p>
+                
+                    <p class="text-sm text-gray-600 leading-relaxed mb-2"><strong>Budget logement: </strong>Environ 900 €/pers (15 nuits en hôtel 3* à Ouidah)</p>
+                
+                    <p class="text-sm text-gray-600 leading-relaxed mb-2"><strong>Budget activités: </strong>Environ 225 €/pers (entrées musées, guides, excursions lacustres, atelier cuisine)</p>
+                
+            </div>
+            <div>
+                <h4 class="font-serif text-xl mb-4 text-template-roche flex items-center gap-2 font-bold">
+                    <span>☀️</span> Périodes Idéales
+                </h4>
+                
+                    <p class="text-sm text-gray-600 leading-relaxed mb-2">Janvier à Février</p>
+                
+                    <p class="text-sm text-gray-600 leading-relaxed mb-2">Saison sèche, températures agréables</p>
+                
+            </div>
+            <div>
+                <h4 class="font-serif text-xl mb-4 text-template-roche flex items-center gap-2 font-bold">
+                    <span>📃</span> Infos pratiques
+                </h4>
+                
+                    <p class="text-sm text-gray-600 leading-relaxed mb-2">💳 Le Franc CFA (XOF) est la monnaie locale. Les cartes de crédit sont acceptées dans les grands hôtels et restaurants, mais prévoyez du liquide pour les marchés et petits commerces.</p>
+                
+                    <p class="text-sm text-gray-600 leading-relaxed mb-2">☀️ Le climat est tropical, chaud et humide. Janvier-Février est la saison sèche, avec des températures autour de 30-35°C. Prévoir des vêtements légers en coton et de quoi se protéger du soleil.</p>
+                
+                    <p class="text-sm text-gray-600 leading-relaxed mb-2">🏍️ Les zemidjans (moto-taxis) sont le moyen de transport le plus courant et économique à Ouidah. Négociez toujours le prix avant de monter. Des taxis-voitures sont disponibles pour les longs trajets.</p>
+                
+                    <p class="text-sm text-gray-600 leading-relaxed mb-2">📶 Une carte SIM locale (MTN ou Moov) est recommandée pour la connectivité. Le Wi-Fi est disponible dans la plupart des hôtels.</p>
+                
+                    <p class="text-sm text-gray-600 leading-relaxed mb-2">🗣️ Le français est la langue officielle. Quelques mots en Fon (langue locale) seront très appréciés : "Afon Gnon" (bonjour), "Akpé" (merci).</p>
+                
+            </div>
+            <div>
+                <h4 class="font-serif text-xl mb-4 text-template-roche flex items-center gap-2 font-bold">
+                    <span>🔗</span> Liens Utiles
+                </h4>
+                <ul class="text-sm space-y-3">
+                  <li><a href="https://mytripplanner-dotfr.github.io/Ouidah-nem5y5080y7iq0j/map.html" target="_blank" class="hover:text-template-ocre transition flex items-center gap-2"><strong>🗺️ Carte Interactive</strong></a></li>
+                    
+                        <li><a href="https://www.kayak.fr/flights/OUA-COO/2026-01-26/2026-02-10" target="_blank" class="hover:text-template-ocre transition flex items-center gap-2"><strong>🛬 Réserve ton vol</strong></a></li>
+                    
+                        <li><a href="https://benin-tourisme.com/" target="_blank" class="hover:text-template-ocre transition flex items-center gap-2"><strong>📘 Office de Tourisme du Bénin</strong></a></li>
+                    
+                        <li><a href="https://www.accuweather.com/fr/bj/ouidah/250468/weather-forecast/250468" target="_blank" class="hover:text-template-ocre transition flex items-center gap-2"><strong>🌤️ Météo Ouidah</strong></a></li>
+                    
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-slate-50 border-t border-slate-200 py-6">
+        <div class="max-w-4xl mx-auto px-6 text-center">
+            <p class="font-serif text-lg text-template-roche mb-2 font-bold">
+                MyTrip<span class="text-template-ocre">Planner</span>
+            </p>
+
+                <div class="flex justify-center gap-4 text-[10px] md:text-xs text-slate-500 mb-4 font-semibold">
+                    <a href="#" class="hover:text-brand-primary transition hover:underline">Mentions Légales</a>
+                    <a href="#" class="hover:text-brand-primary transition hover:underline">CGU</a>
+                    <a href="#" class="hover:text-brand-primary transition hover:underline">Confidentialité</a>
+                </div>
+
+            <p class="text-[10px] text-gray-400 mb-2">
+                &copy; 2025 MyTripPlanner. Tous droits réservés.
+            </p>
+
+            <div class="flex justify-center">
+                <p class="text-[10px] text-gray-400 uppercase tracking-widest px-2 py-0.5 border border-gray-200 rounded-full inline-block">
+                    🤖 Contenu généré par IA
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Gestion Scroll & Menu
+        const navDesktop = document.getElementById('nav-desktop');
+        const navMobile = document.getElementById('nav-mobile');
+        
+        window.addEventListener('scroll', function() {
+            if (window.scrollY > 300) {
+                navDesktop.classList.remove('-translate-y-full');
+                navMobile.classList.remove('-translate-y-full');
+            } else {
+                navDesktop.classList.add('-translate-y-full');
+                navMobile.classList.add('-translate-y-full');
+            }
+        });
+
+        // Active Link Highlighter
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const activeId = entry.target.id;
+                    document.querySelectorAll('.mobile-link').forEach(link => {
+                        const linkHref = link.getAttribute('href').substring(1);
+                        if (linkHref === activeId) {
+                            link.classList.remove('bg-gray-100', 'text-gray-700');
+                            link.classList.add('bg-template-ocre', 'text-white', 'shadow-md');
+                            link.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
+                        } else {
+                            link.classList.add('bg-gray-100', 'text-gray-700');
+                            link.classList.remove('bg-template-ocre', 'text-white', 'shadow-md');
+                        }
+                    });
+                }
+            });
+        }, { rootMargin: '-40% 0px -60% 0px' });
+
+        document.querySelectorAll('div[id^="jour-"], section#pratique').forEach(s => observer.observe(s));
+    </script>
+</body>
+</html>
