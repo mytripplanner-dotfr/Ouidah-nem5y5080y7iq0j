@@ -1,0 +1,485 @@
+{
+  "pays": "Bénin",
+  "drapeau": "🇧🇯",
+  "symbole": "🐍",
+  "titre": "Ouidah, sur les traces de l'histoire et de la spiritualité",
+  "budget_total": "Environ 3150 €/personne",
+  "duree": "15 jours",
+  "date_debut": "2026-01-26",
+  "date_fin": "2026-02-10",
+  "temps_vol": "1h45 depuis Riou, Burkina Faso",
+  "escale": "0",
+  "jours": [
+    {
+      "jour": 1,
+      "symbole": "🛬",
+      "titre": "Arrivée paisible à Ouidah",
+      "legende": "Après votre vol et le transfert depuis Cotonou, installez-vous confortablement. Profitez d'une première balade douce pour vous imprégner de l'atmosphère unique de Ouidah et de ses rues calmes.",
+      "lieu": "Ouidah",
+      "activites": [
+        "<strong>🛬 Arrivée à Cotonou et transfert</strong>: Atterrissage à l'aéroport de Cotonou, suivi d'un transfert relaxant vers votre hébergement à Ouidah, une ville chargée d'histoire.",
+        "<strong>🛏️ Installation à l'hôtel</strong>: Prenez le temps de vous installer dans votre hôtel, de vous rafraîchir et de vous détendre après le voyage.",
+        "<strong>🚶‍♂️ Première balade exploratoire</strong>: Une promenade légère dans les environs immédiats de votre hôtel pour sentir l'ambiance locale et repérer les premiers points d'intérêt."
+      ],
+      "illustration": "jour1.jpg",
+      "encarts": [
+        {
+          "symbole": "ℹ️",
+          "titre": "À savoir",
+          "texte": "Le trajet de l'aéroport de Cotonou à Ouidah dure environ 1 heure. Prévoyez de l'eau et de la monnaie locale (Franc CFA) pour les petites dépenses."
+        }
+      ]
+    },
+    {
+      "jour": 2,
+      "symbole": "🏛️",
+      "titre": "Plongée dans l'histoire et la spiritualité",
+      "legende": "Découvrez le passé poignant de Ouidah au Fort Portugais, puis explorez les mystères du Temple des Pythons et la sérénité de la Forêt Sacrée de Kpassè, des lieux emblématiques de la ville.",
+      "lieu": "Ouidah",
+      "activites": [
+        "<strong>🏛️ Visite du Musée d'Histoire de Ouidah</strong>: Explorez l'ancien Fort Portugais, transformé en musée, pour comprendre l'histoire de la traite négrière et la culture béninoise.",
+        "<strong>🐍 Découverte du Temple des Pythons</strong>: Un lieu sacré où des pythons vivants sont vénérés, symboles de protection et de spiritualité vaudou, offrant une expérience unique et respectueuse.",
+        "<strong>🌳 Promenade dans la Forêt Sacrée de Kpassè</strong>: Flânez dans cette forêt mystique, abritant des statues et des arbres centenaires, un havre de paix et de recueillement."
+      ],
+      "points_interet": [
+        {
+          "nom_recherche": "Musée d'Histoire de Ouidah, Ouidah",
+          "categorie": "Musée",
+          "coords": { "lat": 6.363, "lng": 2.089 }
+        },
+        {
+          "nom_recherche": "Temple des Pythons, Ouidah",
+          "categorie": "Lieu de culte",
+          "coords": { "lat": 6.360, "lng": 2.089 }
+        },
+        {
+          "nom_recherche": "Forêt Sacrée de Kpassè, Ouidah",
+          "categorie": "Site naturel",
+          "coords": { "lat": 6.365, "lng": 2.085 }
+        }
+      ],
+      "illustration": "jour2.jpg",
+      "encarts": [
+        {
+          "symbole": "💡",
+          "titre": "Conseil",
+          "texte": "Au Temple des Pythons, il est d'usage de demander la permission avant de prendre des photos et de respecter le caractère sacré du lieu."
+        }
+      ]
+    },
+    {
+      "jour": 3,
+      "symbole": "🚶‍♀️",
+      "titre": "Sur les traces de la Route des Esclaves",
+      "legende": "Suivez le chemin poignant de la Route des Esclaves, de l'Arbre de l'Oubli à la Porte du Non-Retour, un parcours émouvant et essentiel pour comprendre l'histoire de Ouidah et de l'humanité.",
+      "lieu": "Ouidah",
+      "activites": [
+        "<strong>🚶‍♀️ Parcours de la Route des Esclaves</strong>: Une marche méditative le long du chemin historique emprunté par les captifs, jalonné de monuments commémoratifs.",
+        "<strong>🌳 Visite de l'Arbre de l'Oubli</strong>: Un site symbolique où les esclaves étaient contraints d'effectuer un rituel pour \"oublier\" leur identité avant l'embarquement.",
+        "<strong>🚪 Contemplation à la Porte du Non-Retour</strong>: Un monument emblématique sur la plage, marquant le point de non-retour pour des millions d'Africains déportés, offrant un moment de recueillement."
+      ],
+      "points_interet": [
+        {
+          "nom_recherche": "Route des Esclaves, Ouidah",
+          "categorie": "Site historique",
+          "coords": { "lat": 6.350, "lng": 2.075 }
+        },
+        {
+          "nom_recherche": "Arbre de l'Oubli, Ouidah",
+          "categorie": "Site historique",
+          "coords": { "lat": 6.355, "lng": 2.080 }
+        },
+        {
+          "nom_recherche": "La Porte du Non-Retour, Ouidah",
+          "categorie": "Monument",
+          "coords": { "lat": 6.341, "lng": 2.062 }
+        }
+      ],
+      "illustration": "jour3.jpg",
+      "encarts": [
+        {
+          "symbole": "🙏",
+          "titre": "Respect",
+          "texte": "Ce parcours est un lieu de mémoire. Adoptez une attitude respectueuse et ouverte à la réflexion sur cette période sombre de l'histoire."
+        }
+      ]
+    },
+    {
+      "jour": 4,
+      "symbole": "🏖️",
+      "titre": "Détente balnéaire et immersion locale",
+      "legende": "Après les émotions de la veille, offrez-vous une journée de pure détente sur la plage de Ouidah. L'après-midi, plongez dans l'effervescence colorée du marché local pour une immersion authentique.",
+      "lieu": "Ouidah",
+      "activites": [
+        "<strong>🏖️ Matinée de relaxation à la Plage de Ouidah</strong>: Profitez du sable fin et des vagues de l'Atlantique pour une matinée de farniente et de baignade, loin de l'agitation.",
+        "<strong>🚶‍♂️ Balade et déjeuner sur la plage</strong>: Une promenade tranquille le long du rivage, suivie d'un déjeuner simple avec vue sur l'océan, savourant la brise marine.",
+        "<strong>🛍️ Exploration du Marché de Ouidah</strong>: Immergez-vous dans l'ambiance vibrante du marché local, découvrez les produits frais, l'artisanat et la vie quotidienne des habitants."
+      ],
+      "points_interet": [
+        {
+          "nom_recherche": "Plage de Ouidah, Ouidah",
+          "categorie": "Plage",
+          "coords": { "lat": 6.339, "lng": 2.065 }
+        },
+        {
+          "nom_recherche": "Marché de Ouidah, Ouidah",
+          "categorie": "Marché",
+          "coords": { "lat": 6.362, "lng": 2.091 }
+        }
+      ],
+      "illustration": "jour4.jpg",
+      "encarts": [
+        {
+          "symbole": "☀️",
+          "titre": "Protection solaire",
+          "texte": "Le soleil peut être intense. N'oubliez pas votre crème solaire, un chapeau et des lunettes de soleil pour la plage et le marché."
+        }
+      ]
+    },
+    {
+      "jour": 5,
+      "symbole": "🛶",
+      "titre": "Évasion lacustre et villages de pêcheurs",
+      "legende": "Partez à la découverte du paisible Lac Ahémé en pirogue, explorez ses villages de pêcheurs sur pilotis et imprégnez-vous de la vie locale rythmée par l'eau, une expérience authentique et relaxante.",
+      "lieu": "Lac Ahémé",
+      "activites": [
+        "<strong>🛶 Excursion en pirogue sur le Lac Ahémé</strong>: Une balade apaisante sur les eaux calmes du lac, observant la faune et la flore locales.",
+        "<strong>🏡 Visite d'un village de pêcheurs</strong>: Rencontrez les habitants, découvrez leurs techniques de pêche traditionnelles et leur mode de vie simple et harmonieux.",
+        "<strong>🍽️ Déjeuner de poissons frais</strong>: Savourez un délicieux repas à base de poissons fraîchement pêchés du lac, préparés selon les recettes locales."
+      ],
+      "points_interet": [
+        {
+          "nom_recherche": "Lac Ahémé, Bénin",
+          "categorie": "Lac",
+          "coords": { "lat": 6.35, "lng": 1.95 }
+        },
+        {
+          "nom_recherche": "Village de pêcheurs, Lac Ahémé",
+          "categorie": "Village",
+          "coords": { "lat": 6.36, "lng": 1.96 }
+        }
+      ],
+      "illustration": "jour5.jpg",
+      "encarts": [
+        {
+          "symbole": "📸",
+          "titre": "Photographie",
+          "texte": "Demandez toujours la permission avant de photographier les personnes, surtout dans les villages. Un sourire et quelques mots en langue locale (Fon) sont toujours appréciés."
+        }
+      ]
+    },
+    {
+      "jour": 6,
+      "symbole": "🎨",
+      "titre": "Art, culture et spiritualité vaudou",
+      "legende": "Explorez la richesse de l'art contemporain africain au Centre Zinsou, puis, si vous le souhaitez, participez à une rencontre respectueuse avec un dignitaire vaudou pour une meilleure compréhension de cette spiritualité.",
+      "lieu": "Ouidah",
+      "activites": [
+        "<strong>🎨 Visite du Centre Artistique et Culturel Zinsou</strong>: Découvrez des expositions d'art contemporain africain, souvent en lien avec la culture et l'histoire béninoises, dans un cadre magnifique.",
+        "<strong>🗣️ Rencontre avec un dignitaire Vaudou (optionnel)</strong>: Une opportunité unique d'échanger avec un initié pour démystifier et mieux comprendre les pratiques et la philosophie du Vaudou, dans le respect mutuel.",
+        "<strong>🚶‍♂️ Balade libre et détente</strong>: Profitez de l'après-midi pour flâner dans les rues de Ouidah, faire quelques emplettes ou simplement vous reposer."
+      ],
+      "points_interet": [
+        {
+          "nom_recherche": "Centre Artistique et Culturel Zinsou, Ouidah",
+          "categorie": "Centre culturel",
+          "coords": { "lat": 6.363, "lng": 2.088 }
+        }
+      ],
+      "illustration": "jour6.jpg",
+      "encarts": [
+        {
+          "symbole": "💡",
+          "titre": "Compréhension",
+          "texte": "Le Vaudou est une religion complexe et souvent mal comprise. Abordez cette rencontre avec curiosité et ouverture d'esprit, sans jugement."
+        }
+      ]
+    },
+    {
+      "jour": 7,
+      "symbole": "🌊",
+      "titre": "Évasion côtière à Grand-Popo",
+      "legende": "Partez pour une journée d'évasion à Grand-Popo, où la rivière Mono rencontre l'océan Atlantique à la Bouche du Roy. Profitez des plages paisibles et de l'ambiance sereine de ce lieu unique.",
+      "lieu": "Grand-Popo",
+      "activites": [
+        "<strong>🚗 Trajet vers Grand-Popo</strong>: Un agréable trajet le long de la côte pour rejoindre cette charmante ville côtière, connue pour ses plages et son estuaire.",
+        "<strong>🏖️ Détente sur les plages de Grand-Popo</strong>: L'occasion de se prélasser sur des plages moins fréquentées, de se baigner ou de faire de longues promenades au bord de l'eau.",
+        "<strong>🌅 Visite de la Bouche du Roy</strong>: Admirez le spectacle naturel où le fleuve Mono se jette dans l'océan, un lieu de rencontre entre eau douce et eau salée, idéal pour la contemplation."
+      ],
+      "points_interet": [
+        {
+          "nom_recherche": "Grand-Popo, Bénin",
+          "categorie": "Ville côtière",
+          "coords": { "lat": 6.28, "lng": 1.85 }
+        },
+        {
+          "nom_recherche": "Bouche du Roy, Grand-Popo",
+          "categorie": "Estuaire",
+          "coords": { "lat": 6.275, "lng": 1.845 }
+        }
+      ],
+      "illustration": "jour7.jpg",
+      "encarts": [
+        {
+          "symbole": "🍽️",
+          "titre": "Gastronomie",
+          "texte": "Grand-Popo est réputée pour ses fruits de mer frais. Ne manquez pas de déguster un poisson grillé ou des crevettes dans un restaurant local en bord de mer."
+        }
+      ]
+    },
+    {
+      "jour": 8,
+      "symbole": "🚲",
+      "titre": "Balade à vélo et immersion rurale",
+      "legende": "De retour à Ouidah, explorez les environs à vélo, traversant des plantations de palmiers et des villages paisibles. Une journée douce pour apprécier la campagne béninoise et ses paysages verdoyants.",
+      "lieu": "Ouidah",
+      "activites": [
+        "<strong>🚲 Balade à vélo dans la campagne de Ouidah</strong>: Louez un vélo et partez à la découverte des chemins de terre, des champs et des palmeraies environnantes, à votre rythme.",
+        "<strong>🌴 Visite d'une plantation de palmiers à huile</strong>: Apprenez-en davantage sur la culture du palmier à huile, un élément essentiel de l'économie et de la cuisine locale.",
+        "<strong>🧘‍♀️ Après-midi libre et détente</strong>: Profitez de l'après-midi pour vous reposer, lire un livre ou simplement vous imprégner de l'ambiance tranquille de Ouidah."
+      ],
+      "points_interet": [
+        {
+          "nom_recherche": "Plantation de palmiers, Ouidah",
+          "categorie": "Site agricole",
+          "coords": { "lat": 6.37, "lng": 2.10 }
+        }
+      ],
+      "illustration": "jour8.jpg",
+      "encarts": [
+        {
+          "symbole": "💧",
+          "titre": "Hydratation",
+          "texte": "Pensez à emporter suffisamment d'eau pour votre balade à vélo, surtout si la chaleur est au rendez-vous."
+        }
+      ]
+    },
+    {
+      "jour": 9,
+      "symbole": "🍲",
+      "titre": "Atelier culinaire et saveurs locales",
+      "legende": "Plongez dans la gastronomie béninoise avec un atelier de cuisine. Apprenez à préparer des plats traditionnels et savourez vos créations, une expérience gourmande et conviviale.",
+      "lieu": "Ouidah",
+      "activites": [
+        "<strong>👩‍🍳 Atelier de cuisine béninoise</strong>: Participez à un cours de cuisine pour découvrir les secrets des saveurs locales et apprendre à préparer des plats emblématiques.",
+        "<strong>🍽️ Dégustation de vos créations</strong>: Savourez le fruit de votre travail lors d'un déjeuner convivial, partageant les plats que vous avez préparés.",
+        "<strong>🛍️ Visite d'une boutique d'artisanat local</strong>: Trouvez des souvenirs uniques et soutenez les artisans locaux en découvrant leurs créations."
+      ],
+      "points_interet": [
+        {
+          "nom_recherche": "Atelier de cuisine, Ouidah",
+          "categorie": "Activité",
+          "coords": { "lat": 6.36, "lng": 2.09 }
+        }
+      ],
+      "illustration": "jour9.jpg",
+      "encarts": [
+        {
+          "symbole": "🌶️",
+          "titre": "Épices",
+          "texte": "La cuisine béninoise peut être relevée. N'hésitez pas à demander à ajuster le niveau de piment selon vos préférences lors de l'atelier."
+        }
+      ]
+    },
+    {
+      "jour": 10,
+      "symbole": "⛪",
+      "titre": "Patrimoine religieux et coexistence",
+      "legende": "Explorez les lieux de culte de Ouidah, témoins de la diversité religieuse et de la coexistence pacifique. Visitez l'Église Saint-Michel et la Mosquée de Ouidah, des édifices chargés d'histoire.",
+      "lieu": "Ouidah",
+      "activites": [
+        "<strong>⛪ Visite de l'Église Saint-Michel</strong>: Admirez l'architecture de cette église historique, un symbole de la présence chrétienne à Ouidah et de son passé colonial.",
+        "<strong>🕌 Découverte de la Mosquée de Ouidah</strong>: Explorez ce lieu de culte musulman, illustrant la richesse et la diversité des croyances présentes dans la ville.",
+        "<strong>🚶‍♂️ Balade dans le quartier historique</strong>: Flânez dans les rues adjacentes, observez l'architecture coloniale et l'animation locale, appréciant la douceur de vivre."
+      ],
+      "points_interet": [
+        {
+          "nom_recherche": "Église Saint-Michel, Ouidah",
+          "categorie": "Lieu de culte",
+          "coords": { "lat": 6.361, "lng": 2.090 }
+        },
+        {
+          "nom_recherche": "Mosquée de Ouidah, Ouidah",
+          "categorie": "Lieu de culte",
+          "coords": { "lat": 6.362, "lng": 2.090 }
+        }
+      ],
+      "illustration": "jour10.jpg",
+      "encarts": [
+        {
+          "symbole": " respectful",
+          "titre": "Tenue vestimentaire",
+          "texte": "Lors de la visite des lieux de culte, prévoyez une tenue respectueuse (épaules et genoux couverts) et retirez vos chaussures si nécessaire."
+        }
+      ]
+    },
+    {
+      "jour": 11,
+      "symbole": "🌿",
+      "titre": "Nature et tranquillité des lagunes",
+      "legende": "Échappez à l'agitation pour une journée de sérénité au bord des lagunes de Ouidah. Profitez d'une balade en pirogue et de moments de calme au cœur d'une nature luxuriante.",
+      "lieu": "Ouidah",
+      "activites": [
+        "<strong>🛶 Balade en pirogue sur les lagunes</strong>: Explorez les paisibles lagunes de Ouidah, un écosystème riche et un havre de paix pour la faune locale.",
+        "<strong>🐦 Observation des oiseaux</strong>: Profitez de la quiétude des lieux pour observer les nombreuses espèces d'oiseaux qui peuplent les rives et les mangroves.",
+        "<strong>🧘‍♀️ Moment de détente au bord de l'eau</strong>: Installez-vous confortablement et laissez-vous bercer par le clapotis de l'eau, un moment idéal pour la méditation ou la lecture."
+      ],
+      "points_interet": [
+        {
+          "nom_recherche": "Lagunes de Ouidah, Ouidah",
+          "categorie": "Site naturel",
+          "coords": { "lat": 6.37, "lng": 2.07 }
+        }
+      ],
+      "illustration": "jour11.jpg",
+      "encarts": [
+        {
+          "symbole": "🦟",
+          "titre": "Anti-moustiques",
+          "texte": "Les zones humides peuvent attirer les moustiques. Pensez à appliquer un répulsif, surtout en fin de journée."
+        }
+      ]
+    },
+    {
+      "jour": 12,
+      "symbole": "🏺",
+      "titre": "Découverte artisanale et saveurs locales",
+      "legende": "Poursuivez votre immersion culturelle en visitant des ateliers d'artisans locaux. Terminez la journée par une dégustation de fruits exotiques et de spécialités sucrées béninoises.",
+      "lieu": "Ouidah",
+      "activites": [
+        "<strong>🏺 Visite d'ateliers d'artisanat</strong>: Rencontrez des potiers, des sculpteurs ou des tisserands, observez leur savoir-faire et admirez leurs créations uniques.",
+        "<strong>🛍️ Shopping de souvenirs authentiques</strong>: L'occasion parfaite de trouver des cadeaux originaux et de soutenir l'économie locale.",
+        "<strong>🥭 Dégustation de fruits exotiques et douceurs</strong>: Laissez-vous tenter par la richesse des saveurs locales en goûtant des fruits frais et des pâtisseries traditionnelles."
+      ],
+      "points_interet": [
+        {
+          "nom_recherche": "Ateliers d'artisans, Ouidah",
+          "categorie": "Artisanat",
+          "coords": { "lat": 6.36, "lng": 2.09 }
+        }
+      ],
+      "illustration": "jour12.jpg",
+      "encarts": [
+        {
+          "symbole": " bargaining",
+          "titre": "Négociation",
+          "texte": "Dans les marchés et ateliers, la négociation des prix est souvent de mise. Faites-le avec le sourire et respect."
+        }
+      ]
+    },
+    {
+      "jour": 13,
+      "symbole": "💆‍♀️",
+      "titre": "Journée de bien-être et de sérénité",
+      "legende": "Offrez-vous une journée entièrement dédiée au bien-être. Profitez d'un massage relaxant, d'une séance de yoga ou simplement d'un moment de calme pour recharger vos batteries avant le départ.",
+      "lieu": "Ouidah",
+      "activites": [
+        "<strong>💆‍♀️ Massage relaxant (optionnel)</strong>: Laissez-vous choyer par un massage traditionnel pour détendre corps et esprit, une parenthèse de pure relaxation.",
+        "<strong>🧘‍♀️ Séance de yoga ou méditation</strong>: Trouvez un endroit paisible pour une séance de yoga ou de méditation, en harmonie avec la nature environnante.",
+        "<strong>📖 Lecture et contemplation</strong>: Profitez de ce temps libre pour lire, écrire ou simplement contempler les paysages, savourant les derniers instants de quiétude."
+      ],
+      "points_interet": [],
+      "illustration": "jour13.jpg",
+      "encarts": [
+        {
+          "symbole": "✨",
+          "titre": "Détente",
+          "texte": "N'hésitez pas à demander à votre hôtel s'il propose des services de bien-être ou s'il peut vous recommander un prestataire local."
+        }
+      ]
+    },
+    {
+      "jour": 14,
+      "symbole": "🎁",
+      "titre": "Derniers souvenirs et dîner d'adieu",
+      "legende": "Profitez de cette dernière journée complète pour faire vos derniers achats de souvenirs et savourer un dîner d'adieu mémorable, clôturant en beauté votre voyage à Ouidah.",
+      "lieu": "Ouidah",
+      "activites": [
+        "<strong>🎁 Achats de dernière minute</strong>: Flânez une dernière fois dans les boutiques et marchés pour trouver les derniers souvenirs à rapporter de votre voyage.",
+        "<strong>🚶‍♂️ Revoir un lieu coup de cœur</strong>: Retournez visiter un endroit qui vous a particulièrement marqué pour un dernier regard et quelques photos.",
+        "<strong>🍽️ Dîner d'adieu dans un restaurant local</strong>: Savourez un dernier repas béninois, remémorant les moments forts de votre séjour dans une ambiance conviviale."
+      ],
+      "points_interet": [],
+      "illustration": "jour14.jpg",
+      "encarts": [
+        {
+          "symbole": "📦",
+          "titre": "Bagages",
+          "texte": "Pensez à vérifier le poids de vos bagages si vous avez fait beaucoup d'achats, pour éviter les surprises à l'aéroport."
+        }
+      ]
+    },
+    {
+      "jour": 15,
+      "symbole": "🛫",
+      "titre": "Départ de Ouidah",
+      "legende": "Il est temps de quitter Ouidah, la tête pleine de souvenirs et le cœur enrichi par cette expérience unique. Transfert vers l'aéroport de Cotonou pour votre vol retour.",
+      "lieu": "Ouidah",
+      "activites": [
+        "<strong>🛏️ Petit-déjeuner et check-out</strong>: Profitez d'un dernier petit-déjeuner béninois avant de procéder au départ de votre hôtel.",
+        "<strong>🚗 Transfert vers l'aéroport de Cotonou</strong>: Un véhicule vous conduira à l'aéroport international Cardinal Bernardin Gantin de Cotonou pour votre vol.",
+        "<strong>🛫 Vol retour</strong>: Embarquement pour votre vol, emportant avec vous les couleurs, les sons et les saveurs du Bénin."
+      ],
+      "illustration": "jour15.jpg",
+      "encarts": [
+        {
+          "symbole": "⏰",
+          "titre": "Heure de départ",
+          "texte": "Prévoyez suffisamment de temps pour le transfert et les formalités d'enregistrement à l'aéroport, surtout en cas de trafic."
+        }
+      ]
+    }
+  ],
+  "detail_budget": [
+    { "titre": "Budget vol:", "legende": "A partir de 841 €/pers", "symbole": "🛬" },
+    { "titre": "Budget transports:", "legende": "Environ 375 €/pers (transferts aéroport, taxis locaux, zemidjans)", "symbole": "🚆" },
+    { "titre": "Budget repas:", "legende": "Environ 800 €/pers (restaurants de gamme moyenne, dégustations locales)", "symbole": "🥗" },
+    { "titre": "Budget logement:", "legende": "Environ 900 €/pers (15 nuits en hôtel 3* à Ouidah)", "symbole": "🛏️" },
+    { "titre": "Budget activités:", "legende": "Environ 225 €/pers (entrées musées, guides, excursions lacustres, atelier cuisine)", "symbole": "🎭" }
+  ],
+  "periodes_ideales": [
+    { "titre": "Janvier à Février", "symbole": "☀️" },
+    { "titre": "Saison sèche, températures agréables", "symbole": "🌡️" }
+  ],
+  "infos_pratiques": [
+    { "titre": "Le Franc CFA (XOF) est la monnaie locale. Les cartes de crédit sont acceptées dans les grands hôtels et restaurants, mais prévoyez du liquide pour les marchés et petits commerces.", "symbole": "💳" },
+    { "titre": "Le climat est tropical, chaud et humide. Janvier-Février est la saison sèche, avec des températures autour de 30-35°C. Prévoir des vêtements légers en coton et de quoi se protéger du soleil.", "symbole": "☀️" },
+    { "titre": "Les zemidjans (moto-taxis) sont le moyen de transport le plus courant et économique à Ouidah. Négociez toujours le prix avant de monter. Des taxis-voitures sont disponibles pour les longs trajets.", "symbole": "🏍️" },
+    { "titre": "Une carte SIM locale (MTN ou Moov) est recommandée pour la connectivité. Le Wi-Fi est disponible dans la plupart des hôtels.", "symbole": "📶" },
+    { "titre": "Le français est la langue officielle. Quelques mots en Fon (langue locale) seront très appréciés : \"Afon Gnon\" (bonjour), \"Akpé\" (merci).", "symbole": "🗣️" }
+  ],
+  "infos_decallees": [
+    {
+      "symbole": "💡",
+      "titre": "Le saviez-vous ?",
+      "texte": "Ouidah est considérée comme le berceau du Vaudou. Contrairement aux idées reçues, le Vaudou est une religion complexe et ancestrale, non une pratique de magie noire, et est officiellement reconnu au Bénin."
+    },
+    {
+      "symbole": "🐍",
+      "titre": "Insolite",
+      "texte": "Au Temple des Pythons de Ouidah, les pythons sacrés se promènent librement. Ils sont considérés comme des divinités protectrices et ne sont absolument pas dangereux pour les visiteurs. Il est même possible de les porter autour du cou pour une photo mémorable !"
+    }
+  ],
+  "specialites_culinaires": [
+    {
+      "symbole": "🍴",
+      "titre": "Pâte d'igname (Fufu) et sauce arachide",
+      "description": "Un plat de base au Bénin, la pâte d'igname est une boule de purée d'igname servie avec une sauce riche et onctueuse à base d'arachide, souvent accompagnée de viande ou de poisson."
+    },
+    {
+      "symbole": "🐟",
+      "titre": "Poisson braisé avec Akassa",
+      "description": "Le poisson frais, souvent du capitaine ou de la carpe, est grillé à la perfection et servi avec de l'akassa, une pâte de maïs fermentée, et une sauce tomate épicée. Un délice simple et savoureux."
+    },
+    {
+      "symbole": "🥤",
+      "titre": "Jus de Bissap",
+      "description": "Une boisson rafraîchissante et légèrement acidulée, préparée à partir des fleurs d'hibiscus (bissap), souvent sucrée et parfois parfumée à la menthe ou au gingembre. Parfait pour se désaltérer sous le soleil béninois."
+    }
+  ],
+  "liens_utiles": [
+    { "legende": "Vols", "titre": "Réserve ton vol", "url": "https://www.kayak.fr/flights/OUA-COO/2026-01-26/2026-02-10", "symbole": "🛬" },
+    { "legende": "Infos officielles et inspirations", "titre": "Office de Tourisme du Bénin", "url": "https://benin-tourisme.com/", "symbole": "📘" },
+    { "legende": "Météo", "titre": "Météo Ouidah", "url": "https://www.accuweather.com/fr/bj/ouidah/250468/weather-forecast/250468", "symbole": "🌤️" }
+  ]
+}
